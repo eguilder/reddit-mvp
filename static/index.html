@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reddit Curator</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header><div><p class="eyebrow">LOCAL READER</p><h1>Reddit Curator</h1><p class="muted">A quieter feed, tuned to what you actually want to read.</p></div><button id="refresh">Refresh feed</button></header>
+    <section class="settings card">
+      <h2>Your criteria</h2>
+      <div class="grid">
+        <label>Interests<textarea id="interests" placeholder="One interest per line"></textarea></label>
+        <label>Avoid<textarea id="avoid" placeholder="One term or topic per line"></textarea></label>
+        <label>Subreddits<input id="subreddits" placeholder="MachineLearning, programming" /></label>
+        <label>Minimum interest score<input id="minimum_score" type="number" min="0" max="1" step="0.05" /></label>
+      </div>
+      <button id="save">Save criteria</button><span id="status" class="muted"></span>
+    </section>
+    <section class="feed-head"><h2>For you</h2><span id="count" class="muted"></span></section>
+    <section id="feed" class="feed"><div class="card muted">Loading…</div></section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
